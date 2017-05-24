@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Xpress">
+<head>
+    <meta charset="UTF-8">
+    <title>Xpress - Exercise</title>
+
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/practice.css">
+
+</head>
+<body ng-controller="practice" >
+<div id="wrapper container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img class="to-inline" src='/img/logo_128.png'>
+            <h1 class="to-inline" >Xpress - Exercise</h1>
+            <img class="to-inline" src='/img/logo_128.png'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+
+            <section ng-class="empty">
+                <ul class="table-words">
+                    <li ng-class="show[$index]" ng-repeat="record in records track by $index">
+                        <div class="td td-ck"><input type="checkbox" ng-model="record.show"></div>
+                        <div class="td td-origin"><span>{{record.origin}}</span></div>
+                        <div class="td td-translate"><span  class="{{getClass(record.show)}}">{{record.translate}}</span><span class="{{getHintClass(record.hint, record.show)}}">{{record.hint}}</span></div>
+                        <div ng-click="tts(record.origin)" class="td td-voice icon-table"><i class="fa fa-lg fa-volume-up" title="Click for Sound"></i></div>
+                        <div ng-click="hint($index)" class="td td-hint icon-table"><i class="fa fa-lg fa-lightbulb-o" title="Click for Clue"></i></div>
+                        <div ng-click="goup($index)" class="td td-up icon-table"><i class="fa fa-lg fa-level-up" title="Move to Top"></i></div>
+                        <div ng-click="goToGT(record)" class="td td-gt icon-table"><img class='GT-icon' title="Google Translate" src='https://translate.google.com/favicon.ico'></div>
+                        <div ng-click="remove($index)" class="td td-remove icon-table"><i class="fa fa-lg fa-trash icon-table" title="Remove"></i></div>
+                    </li>
+                </ul>
+                <div class="text-center partials">
+                    <!--<i class="fa fa-chevron-left"></i>-->
+                    <a class="number-partial" href="" ng-click="getPartial(partial)" ng-repeat="partial in partials track by $index">{{partial}}  </a>
+                    <!--<i class="fa fa-chevron-right"></i>-->
+                </div>
+            </section>
+            <section id="no-words" ng-class="show_intro">
+                <h3>Your vocabulary chart is empty.</h3>
+                <h4>You are invited to begin and collect new words to your vocabulary chart.</h4>
+                <img class="img-thumbnail" src="/img/favorive_example.PNG">
+                <h4>And exercise..</h4>
+                <img class="img-thumbnail" src="/img/exercice_exmple.PNG">
+                <h4>Good Luck!!</h4>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <!--<div class="col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8">
+        <section id="custom-word" class="margin-bottom">
+            <table>
+                <tr>
+                    <td class="text-center">
+                        <label for="exampleInputName2" >אנגלית</label>
+                    </td>
+                    <td class="text-center">
+                        <label for="exampleInputEmail2" >עברית</label>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" ng-model="newRecord.en" class="form-control margin-left" id="exampleInputName2" >
+                    </td>
+                    <td>
+                        <input type="text" ng-model="newRecord.he" class="form-control margin-left" id="exampleInputEmail2" >
+                    </td>
+                    <td>
+                        <button ng-click="addRecord()" type="button" class="btn btn-default">הוסף</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>-->
+
+</div>
+
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/practice.js"></script>
+</body>
+</html>

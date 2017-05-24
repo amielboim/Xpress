@@ -1,0 +1,24 @@
+.margin-left{
+    margin-left: 12px;
+}
+.margin-bottom{
+    margin-bottom: 12px;
+}
+.to-inline{
+    display: inline;
+}
+.pointer{
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+.rtl{
+    direction: rtl!important;
+}
+.ltr{
+    direction: ltr!important;
+}

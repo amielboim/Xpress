@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div id="wrapper">
+        <menu id="menu" class="text-center">
+            <i id="home-btn" class="fa fa-home" title="Home"></i>
+            <i id="help-btn" class="fa fa-question-circle" title="Help"></i>
+            <i id="about-btn" class="fa fa-info-circle" title="About"></i>
+        </menu>
+        <header class="text-center">
+            <img class="to-inline" src='/img/logo_48.png'>
+            <h2 class="to-inline" >Welcome to Xpress</h2>
+        </header>
+        <div id="home">
+            <section>
+                <div>
+                    <h5><i>Languages:</i></h5>
+                    <div class="form-group">
+                        <label class="control-label label-lang">From</label>
+                        <select id="from-lang" class="form-control to-inline select-lang"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label label-lang">To</label>
+                        <select id="to-lang" class="form-control to-inline select-lang"></select>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="to-inline"><i>Automatic Window Close</i>&ensp;<div class="to-inline introTooltip"><i class="fa fa-info-circle"></i>
+                        <span>The translation window will close automatically after translation and will open for every new
+
+translation and will not remain open in the corner.</span></div></h5>
+                    <input id="AC-popup" type="checkbox" class="popup-ck to-inline">
+                </div>
+            </section>
+            <section>
+                <div class="text-center">
+                    <button id="practice-btn" type="button" class="btn btn-practice">
+                        Go To Exercise &ensp;
+                        <img src="/img/practice.png">
+                    </button>
+                </div>
+            </section>
+        </div>
+        <div id="help">
+            <section>
+                <p>Thank you for the installation!! <br>First - Please config your languages.</p>
+                <img class="intro" src="/img/select_lang.PNG">
+
+                <p>After this, you can begin... <br>Select some words and click.. Enjoy!!</p>
+                <img class="intro" src="/img/selection_2.png">
+            </section>
+        </div>
+        <div id="about">
+            <section>
+                <p><h4>Xpress – the perfect extension for quick translation by marking a word and clicking.</h4></p>
+                <p><b>Translation</b> – to translate a word all you have to do is mark it, click the icon the pops up next to your
+                    mouse and the translation will show up in a window in the corner of your screen.</p>
+                <p><b>Full integration with google translate</b> – Xpress integrates fully with google translate. By clicking on
+
+                    the logo in the pop-up window you will be transferred to a google translate page open on the
+
+                    marked word for more translations and examples, and of course, with one simple click you'll be right
+
+                    back on the page you were on… cool!</p>
+                <p><b>Saving and practicing saved words</b> – any word you have translated and would like to save and
+
+                    remember, you can click on the star and that word will immediately be added to your favorites list.</p>
+                <p>The exercise page is easily accessible and at any time you can go and practice you saved words!</p>
+                <p><b>Support for all languages</b> – Xpress supports translations for every language! Right after download
+
+                    you can select your languages and start working.</p>
+                <p>We invite you to download and enjoy our simple extension that will benefit you in every web-surf…</p>
+                <p>Enjoy!!</p>
+            </section>
+        </div>
+        <footer class="text-center">
+            <a href="mailto:xpresstotranslate@gmail.com"  class="email">Xpresstotranslate@gmail.com</a>
+        </footer>
+    </div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popup.js"></script>
+</html>
